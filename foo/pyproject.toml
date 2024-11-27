@@ -1,0 +1,20 @@
+[project]
+name = "foo"
+version = "0.1.0"
+dynamic = ["optional-dependencies"]
+requires-python = ">=3.9"
+
+
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+zip-safe = true
+
+[tool.setuptools.packages.find]
+include = ["foo*"]
+namespaces = false
